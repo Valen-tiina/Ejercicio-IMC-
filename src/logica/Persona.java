@@ -2,17 +2,20 @@ package logica;
 
 public class Persona {
 
-	private String nombre;
+	private String nombre, doc;
 	private int edad;
 	private double peso, talla,imc;
 
+	public Persona() {
 
-	public Persona(String nombre, int edad, double peso, double talla, double imc) {
+	}
+	public Persona(String nombre, int edad, double peso, double talla, double imc, String doc) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.peso = peso;
 		this.talla = talla;
 		this.imc = imc;
+		this.doc=doc;
 	}
 
 	public String getNombre() {
@@ -47,9 +50,7 @@ public class Persona {
 		this.talla = talla;
 	}
 
-	public Persona() {
 
-	}
 
 	public double getImc() {
 		return imc;
@@ -58,5 +59,23 @@ public class Persona {
 	public void setImc(double imc) {
 		this.imc = imc;
 	}
+	
+	public String getDoc() {
+		return doc;
+	}
+	public void setDoc(String doc) {
+		 this.doc=doc;
+	}
+	
+	  @Override
+	 public String toString() {
+	        return "Nombre: " + nombre +
+	               ", Edad: " + edad +
+	               ", Peso: " + peso +
+	               ", Talla: " + talla +
+	               ", Documento: " + doc +
+	        		", Imc: "+imc;
+	    }
+	
 
 }
